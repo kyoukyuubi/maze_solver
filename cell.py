@@ -23,11 +23,19 @@ class Cell:
             self._win.draw_line(
                 Line(Point(x1, y1), Point(x1, y2)), "black"
             )
+        else:
+            self._win.draw_line(
+                Line(Point(x1, y1), Point(x1, y2)), "#d9d9d9"
+            )
 
         # Top Wall
         if self.has_top_wall:
             self._win.draw_line(
                 Line(Point(x1, y1), Point(x2, y1)), "black"
+            )
+        else:
+            self._win.draw_line(
+                Line(Point(x1, y1), Point(x2, y1)), "#d9d9d9"
             )
 
         # Right Wall
@@ -35,11 +43,19 @@ class Cell:
             self._win.draw_line(
                 Line(Point(x2, y1), Point(x2, y2)), "black"
             )
+        else:
+            self._win.draw_line(
+                Line(Point(x2, y1), Point(x2, y2)), "#d9d9d9"
+            )
 
         # Bottom Wall
         if self.has_bottom_wall:
             self._win.draw_line(
                 Line(Point(x1, y2), Point(x2, y2)), "black"
+            )
+        else:
+            self._win.draw_line(
+                Line(Point(x1, y2), Point(x2, y2)), "#d9d9d9"
             )
 
     def draw_move(self, to_cell, undo=False):
